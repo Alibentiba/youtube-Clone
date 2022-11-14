@@ -1,0 +1,18 @@
+.category-btn{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: black;
+    gap: 5%;
+    height: 90px;
+    border-radius: 40px;
+}
+.category-btn:hover{
+background-color: rgb(255, 94, 0);
+
+}
