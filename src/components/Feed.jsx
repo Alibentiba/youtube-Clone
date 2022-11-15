@@ -16,17 +16,17 @@ useEffect(()=>{
 
 
   return (
-    <Stack sx={{flexDirection:'row',background:'black',height:'95vh'}}>
+    <Stack direction='row'   sx={{background:'black',height:'95vh'}}>
 
-    <Box sx={{width:'15%',height:"100%",borderRight:'1px solid #FFF',mt:'16px'}}>
+    <Box sx={{width:'20%',height:"100%",borderRight:'1px solid #FFF',mt:'16px'}}>
       <Sidbar selectedcategory={selectedcategory } setselectedcategory={setselectedcategory}/>
       <Typography sx={{width:"100%", textAlign:'center', color:'#FFF',fontSize:"12px",fontWeight:'300'}}>@Copyright 2022 Youtube-Clone</Typography>
      
     </Box >
 
-      <Box sx={{display:'flex',height:'90vh',flexDirection:'column',justifyContent:'flex-start',alignItems:'center'}}>
+      <Box sx={{display:'flex',height:'90vh',flexDirection:'column',width:"100%",justifyContent:'flex-start',alignItems:'flex-start'}}>
       <Typography variant='h4' sx={{fontWeight:'bold',color:'#FFF',pl:'10px',pt:'10px'}}>
-         New<span style={{color:'red'}}>Video</span>
+         {selectedcategory}<span style={{color:'red'}}>Video</span>
        </Typography>
        <Stack>
         <Videos videos={videosList} />
