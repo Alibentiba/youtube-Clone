@@ -1,10 +1,11 @@
 import { Box, Stack } from '@mui/system'
 import React from 'react'
-import {VideoCard} from '../components'
-const Videos = ({videos}) => {
-  console.log('the list ',videos)
+import {VideoCard,Loader} from '../components'
+const Videos = ({videos,Direction}) => {
+   
+if(!videos?.length) return <Loader/>;
   return (
-   <Stack direction='row' flexWrap='wrap' justifyContent='center' gap={1} paddingTop='20px' >
+   <Stack direction={Direction||"row"} flexWrap='wrap' justifyContent='center' gap={1} paddingTop='20px' >
 {videos.map((item,index)=>{
 return <Box key={index}>
 {item.id.videoId&& <VideoCard vidio={item}/>}

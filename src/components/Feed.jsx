@@ -16,7 +16,7 @@ useEffect(()=>{
 
 
   return (
-    <Stack direction='row'   sx={{background:'black',height:'95vh'}}>
+    <Stack direction='row'   sx={{background:'black',height:'105vh'}}>
 
     <Box sx={{width:'20%',height:"100%",borderRight:'1px solid #FFF',mt:'16px'}}>
       <Sidbar selectedcategory={selectedcategory } setselectedcategory={setselectedcategory}/>
@@ -24,7 +24,7 @@ useEffect(()=>{
      
     </Box >
 
-      <Box sx={{display:'flex',height:'90vh',flexDirection:'column',width:"100%",justifyContent:'flex-start',alignItems:'flex-start'}}>
+      <Box sx={{display:'flex',height:'90vh', overflowY: "auto",flexDirection:'column',width:"100%",justifyContent:'flex-start',alignItems:'flex-start'}}>
       <Typography variant='h4' sx={{fontWeight:'bold',color:'#FFF',pl:'10px',pt:'10px'}}>
          {selectedcategory}<span style={{color:'red'}}>Video</span>
        </Typography>

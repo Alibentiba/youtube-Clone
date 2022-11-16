@@ -5,7 +5,7 @@ import "./Sidbar.css"
 const Sidbar = ({selectedcategory,setselectedcategory}) => {
 
   return (
-   <Stack sx={{flexDirection:'column',height:'95%',alignItems:'center',justifyContent:'center',gap:"5px"}}>
+   <Stack sx={{flexDirection:'column',overflowY: "auto",height:'95%',alignItems:'center',justifyContent:'center',gap:"5px"}}>
    {categories.map((item,index)=>{
    return(
     <button onClick={()=>setselectedcategory(item.name)} className='category-btn' style={{background:item.name===selectedcategory&&'#FC1503'}} key={index}  sx={{with:'90%'}}>

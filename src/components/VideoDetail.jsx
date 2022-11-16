@@ -26,10 +26,10 @@ console.log('the videos list',VideosList)
 
   return (
     <Box  sx={{width:'100%',height:'auto',display:'flex',flexDirection:'row'}}>
-    <Stack direction='column' sx={{width:'70%'}} gap='7px'>
+    <Stack direction='column' sx={{width:'70%'}} gap='7px' p='10px'>
     <ReactPlayer width= '100%'height= '70vh' 
     url={`https://www.youtube.com/watch?v=${Ali}`} className="react-player" controls />   
-    <Typography  sx={{fontWeight:'bold',color:'#FFF'}}>{title.slice(0,60)}</Typography>
+    <Typography  sx={{fontWeight:'bold',color:'#FFF'}}>{title.slice(0,100)}</Typography>
      <Stack direction='row' justifyContent='space-between' sx={{width: '100%'}}>
      <Typography sx={{fontSize:'14px',color:'gray'}}>{channelTitle}<CheckCircle sx={{fontSize:'12px',color:'gray'}}/></Typography>
      <Typography sx={{fontSize:'14px',color:'gray'}}><span style={{marginRight:'35px'}}>{viewCount} view</span> <span>{likeCount}likes</span></Typography>
@@ -37,7 +37,12 @@ console.log('the videos list',VideosList)
 
 
     </Stack>
-    <Videos videos={VideosList}/>
+    <Box sx={{display:'flex',height:'90vh', overflowY: "auto",flexDirection:'column',justifyContent:'flex-start',alignItems:'flex-start'}}>
+    <Videos videos={VideosList} Direction='column'/>
+
+
+
+    </Box>
 
 
     </Box>
